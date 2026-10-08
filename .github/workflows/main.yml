@@ -32,7 +32,10 @@ jobs:
 
       - name: Build
         run: bun run build -- --base=/vijay-ai-assistant-app/
-
+      - name: Verify build
+        run: |
+          echo "----- DIST INDEX -----"
+          cat dist/index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
